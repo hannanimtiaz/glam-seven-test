@@ -13,7 +13,7 @@ const ItemCard = (props) => {
     //   date: "2020-02-03",
     //   products: [{ productId: product.id, quantity: 1 }],
     // });
-
+    //DOES NOT ACTUALLY UPDATE CART SO HANDLING IN STATE
     let _cart = structuredClone(cartState);
     let index = cartState.data.findIndex(
       (_product) => _product.productId === product.id
