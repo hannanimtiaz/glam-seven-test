@@ -21,8 +21,10 @@ const CheckoutTable = () => {
             data: response.data,
             quantity: product.quantity,
           });
+          console.log("response.data.price: ", response.data.price);
+          console.log("_subTotal: ", _subTotal);
 
-          _subTotal = _subTotal + response.data.price;
+          _subTotal = _subTotal + response.data.price * product.quantity;
         })
         .catch((error) => {
           console.log("error: ", error);
@@ -33,7 +35,9 @@ const CheckoutTable = () => {
   };
 
   const updateCart = (_product) => {
+    console.log("_product.product.quantity: ", _product.product.quantity);
     console.log("_product: ", _product);
+    // let _quantity = console.log("_quantity: ", _quantity);
     axios
       .patch("https://fakestoreapi.com/carts/2", {
         userId: 1,
@@ -43,15 +47,23 @@ const CheckoutTable = () => {
             productId: _product.product.data.id,
             quantity:
               _product.case === "plus"
-                ? _product.product.quantity++
+                ? ++_product.product.quantity
                 : _product.case === "minus"
-                ? _product.product.quantity--
+                ? --_product.product.quantity
                 : 0,
           },
         ],
       })
       .then((response) => {
-        getCart();
+        console.log("response: ", response);
+        let _cartState = structuredClone(cartState);
+        cartState.data.map((item, index) => {
+          if (item.productId === response.data.products[0].productId) {
+            _cartState.data[index] = response.data.products[0];
+          }
+        });
+        setCartState({ data: _cartState.data, loading: false });
+        // getCart();
       })
       .catch((error) => {
         console.log("error: ", error);
