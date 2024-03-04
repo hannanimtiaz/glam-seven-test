@@ -1,0 +1,29 @@
+.checkout {
+  margin-bottom: 5rem;
+}
+.cart-items {
+  padding: 6rem 0rem !important;
+  border-bottom: 2px solid #f6f7f8;
+}
+.qty-control {
+  background: #f6f7f8;
+  width: fit-content;
+}
+.checkout-details {
+  width: 380px;
+}
+
+.cart-image {
+  width: 100px;
+  display: flex;
+  position: relative;
+}
+
+.cart-item-delete {
+  height: 28px;
+  width: 25px;
+  padding: 0px !important;
+  margin: auto 5px;
+  border-radius: 20px !important;
+  background-color: rgba(255, 104, 117, 0.05) !important;
+}

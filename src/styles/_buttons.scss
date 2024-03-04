@@ -1,0 +1,33 @@
+.btn-link {
+  color: black !important;
+  text-transform: capitalize;
+  text-decoration: none !important;
+  transition: all 0.35s ease-in-out !important;
+  h3 {
+    transition: all 0.2s ease-in-out;
+  }
+  &.active {
+    color: #33a0ff !important;
+    h3 {
+      transition: all 0.1s ease-in-out;
+
+      border-bottom: 4px solid #33a0ff;
+    }
+  }
+  &:hover {
+    h3 {
+      color: #33a0ff !important;
+      text-decoration-color: rgba(255, 255, 255, 1) !important;
+    }
+  }
+}
+
+.btn-primary {
+  border-radius: 0px !important;
+  background: #33a0ff !important;
+  border: 0px;
+  padding: 10px 20px;
+  &:focus {
+    box-shadow: 0 0 0 0.05rem #33a0ff !important;
+  }
+}

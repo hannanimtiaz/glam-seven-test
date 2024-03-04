@@ -1,0 +1,22 @@
+.featured-products {
+  display: flex;
+  justify-content: space-around;
+  .ft-product {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .productImage {
+    display: block;
+    max-width: 150px;
+    max-height: 140px;
+    width: auto;
+    height: auto;
+    margin-bottom: auto;
+  }
+  @media only screen and (max-width: 991px) {
+    flex-direction: column;
+    .ft-product {
+      margin: 2rem auto;
+    }
+  }
+}

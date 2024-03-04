@@ -1,0 +1,33 @@
+.footer {
+  background: #bcddfe;
+  padding: 5rem;
+  @media only screen and (max-width: 991px) {
+    padding: 5rem 1rem;
+  }
+  .links {
+    h4 {
+      padding-left: 3rem;
+      padding-top: 3rem;
+    }
+    .btn-link {
+      padding: 0px !important;
+    }
+  }
+  ul {
+    list-style: none;
+    padding-left: 3rem;
+    padding-top: 2rem;
+  }
+  .payments {
+    padding-top: 1rem;
+    border-top: 1px solid #f6f7f8;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    .copyright {
+      color: #c1c8ce;
+    }
+    img {
+      float: right;
+    }
+  }
+}

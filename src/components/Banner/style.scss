@@ -1,0 +1,35 @@
+.banner {
+  background: #40bfff;
+  margin-top: 10rem;
+  height: 570px;
+  margin-bottom: 18rem;
+  .banner-text {
+    color: white;
+    padding: 6rem 5rem 6rem 6rem;
+    .heading {
+      font-size: 4rem;
+    }
+  }
+
+  .banner-shoe {
+    display: flex;
+    margin-left: auto;
+    margin-top: -10rem;
+    img {
+      margin: auto;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    height: unset;
+    margin-bottom: 7rem;
+    .banner-text {
+      padding: 3rem;
+      .heading {
+        font-size: 2rem;
+      }
+    }
+    .banner-shoe {
+      margin: auto;
+    }
+  }
+}

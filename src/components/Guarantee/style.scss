@@ -1,0 +1,15 @@
+.guarantee {
+  margin-bottom: 18rem;
+  .guarantees {
+    display: flex;
+    justify-content: space-around;
+  }
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 7rem;
+    .guarantees {
+      flex-direction: column;
+      width: 46%;
+      margin: auto;
+    }
+  }
+}

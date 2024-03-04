@@ -1,0 +1,55 @@
+@import "./styles/font.scss";
+@import "./styles/_custom.scss";
+@import "./styles/_buttons.scss";
+@import "./components/Bestseller/style.scss";
+@import "./components/Banner/style.scss";
+@import "./components/Guarantee/style.scss";
+@import "./components/Featured/style.scss";
+@import "./components/FieldWithAction/style.scss";
+@import "./components/Footer/style.scss";
+@import "./components/CheckoutTable/style.scss";
+@import "./components/OfferBanner/style.scss";
+
+body {
+  margin: 0;
+  font-family: "Poppins", BlinkMacSystemFont, "Segoe UI", "Roboto" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #22262a !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.price {
+  color: #9098b1;
+  font-weight: 600;
+  &.cut {
+    font-weight: 500;
+    text-decoration: line-through;
+  }
+}
+.discount {
+  color: #fb7181;
+}
+.discount_price {
+  color: #40bfff;
+}
+
+input.form-control {
+  border-radius: 0px !important;
+  border: 2px solid #bcddfe !important;
+  &::placeholder {
+    color: rgba(38, 38, 38, 0.5);
+  }
+}
+
+select.form-select {
+  border: none;
+  background: url("../public/store/arrow-down.png") 50px 15px no-repeat;
+  -webkit-appearance: none;
+  &:focus {
+    box-shadow: none;
+  }
+}
