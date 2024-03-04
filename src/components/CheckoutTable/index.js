@@ -163,14 +163,14 @@ const CheckoutTable = () => {
             <p>Subtotal</p> <p className="ms-auto">${subTotal}</p>
           </div>
           <div className="d-flex py-3">
-            <p>Shipping Fee</p> <p className="ms-auto">$20</p>
+            <p>Shipping Fee</p> <p className="ms-auto">$0</p>
           </div>
 
           <div className="d-flex py-3 border-bottom">
             <p>Coupon</p> <p className="ms-auto">No</p>
           </div>
           <div className="d-flex py-3 ">
-            <h3>Total</h3> <h3 className="ms-auto">$40</h3>
+            <h3>Total</h3> <h3 className="ms-auto">${subTotal}</h3>
           </div>
           <Button className="w-100" color="primary">
             Checkout
