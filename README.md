@@ -16,7 +16,7 @@ npm install
 - Second, run the development server:
 
 ```bash
-npm dev
+npm start
 ```
 
 or
@@ -34,5 +34,6 @@ serve -s build
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can also checkout the deployment [here](https://glam-seven-test.vercel.app).
 
-If you like my work you could check out my [portfolio](https://hannanimtiaz.com) as well
+If you like my work you could check out my [portfolio](https://hannanimtiaz.com) as well.
