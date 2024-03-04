@@ -59,7 +59,11 @@ const CheckoutTable = () => {
         let _cartState = structuredClone(cartState);
         cartState.data.map((item, index) => {
           if (item.productId === response.data.products[0].productId) {
-            _cartState.data[index] = response.data.products[0];
+            if (response.data.products[0].quantity > 0) {
+              _cartState.data[index] = response.data.products[0];
+            } else {
+              _cartState.data.splice(index, 1);
+            }
           }
         });
         setCartState({ data: _cartState.data, loading: false });

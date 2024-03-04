@@ -1,14 +1,30 @@
 import axios from "axios";
 import { Button } from "reactstrap";
+import { cartContext } from "../../App";
+import { useContext } from "react";
 
 const ItemCard = (props) => {
+  const { cartState, setCartState } = useContext(cartContext);
+
   const addItem = (product) => {
-    console.log("product: ", product);
-    axios.patch("https://fakestoreapi.com/carts/2", {
-      userId: 1,
-      date: "2020-02-03",
-      products: [{ productId: product.id, quantity: 1 }],
-    });
+    // console.log("product: ", product);
+    // axios.patch("https://fakestoreapi.com/carts/2", {
+    //   userId: 1,
+    //   date: "2020-02-03",
+    //   products: [{ productId: product.id, quantity: 1 }],
+    // });
+
+    let _cart = structuredClone(cartState);
+    let index = cartState.data.findIndex(
+      (_product) => _product.productId === product.id
+    );
+    debugger;
+    if (index >= 0) {
+      _cart.data[index].quantity = _cart.data[index].quantity + 1;
+    } else {
+      _cart.data.push({ productId: product.id, quantity: 1 });
+    }
+    setCartState(_cart);
   };
 
   return (
